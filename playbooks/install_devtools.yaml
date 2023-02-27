@@ -1,0 +1,18 @@
+---
+- name: Install software
+  hosts: localhost
+  become: true
+  tasks:
+    - name: Install required packages
+      apt:
+        name:
+          - snapd
+          - default-jre
+          - docker.io
+          - curl
+          - git
+        state: latest
+
+    - name: Install Visual Code
+      become_method: sudo
+      command: snap install code --classic

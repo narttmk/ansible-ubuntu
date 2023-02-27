@@ -1,0 +1,8 @@
+---
+- name: Install Microsoft Edge
+  hosts: localhost
+  become: true
+  tasks:
+    - name: Install IntelliJ IDE
+      become_method: sudo
+      command: snap install intellij-idea-community --classic
