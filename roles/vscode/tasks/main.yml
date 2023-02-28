@@ -1,0 +1,5 @@
+- name: Install
+  apt:
+    name: nginx
+    state: latest
+  become: true

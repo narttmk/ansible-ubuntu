@@ -1,0 +1,10 @@
+- name: Install AWS CLI
+  apt:
+    name: awscli
+    state: present
+- name: Configure AWS CLI
+  command: aws configure set {{ item.key }} {{ item.value }}
+  loop:
+    - { key: "aws_access_key_id", value: "<your_access_key>" }
+    - { key: "aws_secret_access_key", value: "<your_secret_key>" }
+    - { key: "region", value: "<your_aws_region>" }

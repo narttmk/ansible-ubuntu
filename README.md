@@ -14,9 +14,28 @@ sudo apt update
 sudo apt install ansible
 ```
 
+### File structure
 
-### Run playbooks
+ansible/
+├── roles/
+│   ├── aws-cli/
+│   ├── chrome/
+│   ├── docker/
+│   ├── edge/
+│   ├── intellij/
+│   ├── node/
+│   ├── postman/
+│   ├── vscode/
+│   └── zsh/
+└── playbook.yml
+
+
+### Using
+Comment what you don't want to install
+![ScreenCapture](/images/capture1.png "Screen Capture")
+
+Using this command to install softwares:
 
 ```bash
-ansible-playbook --ask-become-pass --become-user <your_username> playbooks/*
+ansible-playbook playbook.yml
 ```

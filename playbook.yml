@@ -1,0 +1,12 @@
+- name: Install software
+  hosts: localhost
+  roles:
+    - aws-cli
+    - docker
+    - edge
+    # - google-chrome
+    - intellij
+    - node
+    - postman
+    - vscode
+    - zsh
